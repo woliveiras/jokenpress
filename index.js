@@ -89,13 +89,11 @@ app.post('/endgame', (request, response) => {
     data.scores.user += 1;
   } else if (userChoice === 3 && computerChoice === 1) {
     result = 'Você perdeu!';
-    console.log('Travei aqui');
     data.scores.computer += 1;
   } else if (userChoice === 3 && computerChoice === 3) {
     result = 'Empatou!';
   }
 
-  console.log(userChoice);
   response.render('end-game', {
     result: result
   });
